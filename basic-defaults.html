@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range</title>
+    <style>
+        body{
+            margin:20px auto;
+            max-width:400px;
+        }
+        input, 
+        label{
+            display:block;
+            margin-bottom:20px;
+        }
+        /* range */
+        input[type="range"]{
+            appearance:none;
+            background:red;
+            height:2px;
+            padding:0;
+            outline:1px solid transparent;
+        }
+        /* color */
+        label{
+            vertical-align: 4px;;
+        }
+        input[type="color"]{
+            border:0;
+            padding:0;
+        }
+        /* file */
+        input[type="file"]{
+            height:0;
+            padding:0;
+            opacity:0;
+        }
+        label[for="file"]{
+            box-shadow: 1px 1px 3px #cccccc;
+            background:linear-gradient(to bottom, #eeeeee, #cccccc);
+            border:1px solid darkgrey;
+            border-radius:5px;
+            text-align:center;
+            line-height:1.5;
+            width:20%
+        }
+        label[for="file"]:hover{
+            background:linear-gradient(to bottom, white, #dddddd);
+        }
+        label[for="file"]:active{
+            box-shadow:inset 1px 1px 3px #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <label for="range">Range</label>
+    <input type="range" id="range" name="range">
+    <label for="color">Color</label>
+    <input type="color" id="color" name="color">
+    <label for="file">File</label>
+    <input type="file" id="file" name="file">    
+    </form>
+</body>
+</html>
