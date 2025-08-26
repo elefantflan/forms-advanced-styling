@@ -6,7 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
+      input[type="checkbox"]{
+        appearance:none;
+      }
+      input[type="checkbox"]{
+        /* to position the checkmark the way you want within checkbox */
+        position:relative;
+        width:1em;
+        height:1em;
+        border: 1px solid gray;
+        /* adjusts the position of the checkboxes on the text baseline */
+        vertical-align: -2px;
+        /* set here so that windows' high contrast mode can override */
+        color:green;
+      }
+      /* put checked content here (but hidden) */
+      input[type="checkbox"]::before{
+        content: "✔";
+        position: absolute;
+        font-size: 1.2em;
+        right: -1px;
+        top: -0.3em;
+        visibility: hidden;
+      }
+      /* checked content is visible after checked */
+      input[type="checkbox"]:checked::before{
+        visibility:visible;
+      }
+      input[type="checkbox"]:disabled{
+        border-color:black;
+        background: #dddddd;
+        color:gray;
+      }
     </style>
 </head>
 <body>
